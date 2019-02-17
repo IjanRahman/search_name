@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="searchbox">
+			<div class="header">
+				<h1>Contacts</h1>
+				<input onkeyup="filter()" type="text" id="value" placeholder="Type to Search">
+			</div>
+
+			<div class="container">
+				<div class="profile">
+					<span class="icon">A</span>
+					<span class="name">Anna Ishii</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">A</span>
+					<span class="name">Alice Hirose</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">E</span>
+					<span class="name">Eikura Nana</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">E</span>
+					<span class="name">Elaiza Ikeda</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">F</span>
+					<span class="name">Fumika shimizu</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">H</span>
+					<span class="name">Hashimoto Kanna</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">H</span>
+					<span class="name">Haruna Kawaguchi</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">I</span>
+					<span class="name">Ishihara Satomi</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">I</span>
+					<span class="name">Ikema Natsumi</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">K</span>
+					<span class="name">Kasumi Arimura</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">K</span>
+					<span class="name">Kitagawa Keiko</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">M</span>
+					<span class="name">Mone Kamishiraishi</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">M</span>
+					<span class="name">Mayu Watanabe</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">N</span>
+					<span class="name">Nagasawa Masami</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">S</span>
+					<span class="name">Suzu Hirose</span>
+				</div>
+
+				<div class="profile">
+					<span class="icon">T</span>
+					<span class="name">Tao Tsuchiya</span>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function filter() {
+				var value,name,profile,i;
+
+				value = document.getElementById("value").value.toUpperCase();
+				profile = document.getElementsByClassName("profile");
+
+				for (i = 0; i < profile.length; i++) {
+					name = profile[i].getElementsByClassName("name");
+					if (name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+						profile[i].style.display = "flex";
+					}
+					else{
+						profile[i].style.display = "none";
+					}
+					}
+				}
+		</script>
+	</body>
+</html>
